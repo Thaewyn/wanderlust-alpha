@@ -1,0 +1,106 @@
+<html>
+  <head>
+   <link rel="stylesheet" type="text/css" href="../styles/main.css">
+   <link rel="stylesheet" type="text/css" href="../styles/player.css">
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
+   <script type="text/javascript" src="../scripts/animation_engine.js"></script>
+   <script type="text/javascript" src="../scripts/april_proto.js"></script>
+   <title>April 2016 - Quest</title>
+  </head>
+  <body>
+    <div class="row top_nav">
+      <ul class="hud">
+        <li class="hud_bit hp">
+          <span class="hud_title">HP:</span><br />
+          <span class="hud_data">4</span>
+        </li>
+        <li class="hud_bit attack">
+          <span class="hud_title">Attack:</span><br />
+          <span class="hud_data">1</span>
+        </li>
+        <li class="hud_bit defense">
+          <span class="hud_title">Defense:</span><br />
+          <span class="hud_data">1</span>
+        </li>
+        <li class="hud_bit gold">
+          <span class="hud_title">Gold:</span><br />
+          <span class="hud_data">0</span>
+        </li>
+        <li class="hud_bit level">
+          <span class="hud_title">Level:</span><br />
+          <span class="hud_data">1</span>
+        </li>
+        <li class="hud_bit xp">
+          <span class="hud_title">XP:</span><br />
+          <span class="hud_data">0</span>
+        </li>
+        <li class="hud_bit weapon">
+          <span class="hud_title">Weapon:</span><br />
+          <span class="hud_data">Wooden Sword</span>
+        </li>
+        <li class="hud_bit armor">
+          <span class="hud_title">Armor:</span><br />
+          <span class="hud_data">Leather Armor</span>
+        </li>
+      </ul>
+    </div>
+    <div id="main_content">
+      <div class="row game">
+        <div class="background"></div>
+        <div class="lanes">
+          <div class="lane_1">
+            <div class="row_5"></div>
+            <div class="row_4"></div>
+            <div class="row_3"></div>
+            <div class="row_2"></div>
+            <div class="row_1"></div>
+          </div>
+          <div class="lane_2">
+            <div class="row_5"></div>
+            <div class="row_4"></div>
+            <div class="row_3">Press left or right to change lanes</div>
+            <div class="row_2"></div>
+            <div class="row_1"></div>
+          </div>
+          <div class="lane_3">
+            <div class="row_5"></div>
+            <div class="row_4"></div>
+            <div class="row_3"></div>
+            <div class="row_2">Press up to continue on your quest</div>
+            <div class="row_1">
+              <!-- Front and center, player's starting position -->
+              <div id="player">
+                <div class="speech_bubble">
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lane_4">
+            <div class="row_5"></div>
+            <div class="row_4"></div>
+            <div class="row_3"></div>
+            <div class="row_2"></div>
+            <div class="row_1"></div>
+          </div>
+          <div class="lane_5">
+            <div class="row_5"></div>
+            <div class="row_4"></div>
+            <div class="row_3"></div>
+            <div class="row_2"></div>
+            <div class="row_1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row footer">
+      <ul class="controls">
+        <li class="control left">Left</li>
+        <li class="control up">Up</li>
+        <li class="control right">Right</li>
+      </ul>
+    </div>
+  </body>
+</html>
