@@ -1,0 +1,9 @@
+/* === Body === */
+* {
+  box-sizing: border-box;
+}
+#main_content {
+  width: 800px;
+  margin: auto;
+  background-color: #f99;
+}
