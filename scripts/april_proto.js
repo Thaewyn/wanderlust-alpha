@@ -105,7 +105,7 @@ var gameController = {
       $(".hud .hp").children(".hud_data").text(this.stat_hp);
       gameController.speech_bubble("Level up!");
 
-      //alternate increasing attack and defense
+      //alternate increasing base attack and defense
       switch (this.stat_lvl % 2) {
         case 1:
           this.stat_atk += 1;
@@ -403,11 +403,11 @@ var gameController = {
     var level = parseInt(this.player.stat_lvl);
     switch (level) {
       default:
-      case 6:
+      case 10:
         monster_picker.push(monster_list.lich);
-      case 5:
+      case 7:
         monster_picker.push(monster_list.zombie);
-      case 4:
+      case 5:
         monster_picker.push(monster_list.ghoul);
       case 3:
         monster_picker.push(monster_list.orc);
@@ -439,12 +439,12 @@ var gameController = {
   spawn_weaponsmith: function (lane_num) {
     console.log("gameController.spawn_weaponsmith");
 
-    $(".lane_"+lane_num+" .row_"+this.row_count).append("<div name='weaponsmith' class='building weaponsmith' cost='50' weapon='Steel Sword' attack='3'>Weapons</div>");
+    $(".lane_"+lane_num+" .row_"+this.row_count).append(building_list.weaponsmith_1);
   },
   spawn_armorsmith: function (lane_num) {
     console.log("gameController.spawn_armorsmith");
 
-    $(".lane_"+lane_num+" .row_"+this.row_count).append("<div name='armorsmith' class='building armorsmith' cost='70' armor='Steel Armor' defense='3'>Armor</div>");
+    $(".lane_"+lane_num+" .row_"+this.row_count).append(building_list.armorsmith_1);
   },
   spawn_inn: function (lane_num) {
     console.log("gameController.spawn_inn");
@@ -500,6 +500,11 @@ var monster_list = {
   ghoul: "<div name='ghoul' class='monster ghoul' attack='9' hp='15' gold='8' xp='11'></div>",
   zombie: "<div name='zombie' class='monster zombie' attack='12' hp='15' gold='9' xp='13'></div>",
   lich: "<div name='lich' class='monster lich' attack='15' hp='30' gold='10' xp='15'></div>"
+}
+
+var building_list = {
+  weaponsmith_1: "<div name='weaponsmith' class='building weaponsmith' cost='50' weapon='Steel Sword' attack='3'>Weaponsmith\nSteel sword\n50 Gold</div>",
+  armorsmith_1: "<div name='armorsmith' class='building armorsmith' cost='70' armor='Steel Armor' defense='3'>Armorsmith\nSteel Armor\n70 Gold</div>"
 }
 
 $(document).ready(function () {
