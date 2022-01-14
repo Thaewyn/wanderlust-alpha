@@ -1,0 +1,33 @@
+{
+  "goblin": {
+    "name": "Goblin",
+    "hp": 10,
+    "attacks": [
+      {
+        "name": "hit",
+        "desc": "hits you with a club!",
+        "damage": 2
+      }
+    ],
+    "xp": 5,
+    "gold": 3
+  },
+  "wolf": {
+    "name": "Wolf",
+    "hp": 15,
+    "attacks": [
+      {
+        "name": "bite",
+        "desc": "bites you with its fangs!",
+        "damage": 2
+      },
+      {
+        "name": "claw",
+        "desc": "scratches you with its claws!",
+        "damage": 1
+      }
+    ],
+    "xp": 5,
+    "gold": 3
+  }
+}

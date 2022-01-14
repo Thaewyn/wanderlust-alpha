@@ -1,7 +1,32 @@
-<section>
-  <h2>Homepage</h2>
-  <p>blah blah testing paragraph.</p>
-  <p>{{test}}</p>
+<section class="left column">
+  <h3>Player stats</h3>
+  <ul class="stats">
+    <li>HP:<span class="hp">0</span></li>
+    <li>Level:<span class="level">0</span></li>
+    <li>XP:<span class="xp">0</span></li>
+    <li>Gold:<span class="gold">0</span></li>
+  </ul>
 </section>
+<section class="center column">
+  {{#unless loggedIn}}
+  Please log in to play!
+  {{/unless}}
+  <div class="canvas"></div>
+  <div class="dice">
+    <div class="die one"></div>
+    <div class="die two"></div>
+    <div class="die three"></div>
+    <div class="die four"></div>
+    <div class="die five"></div>
+  </div>
+</section>
+<section class="right column">
+  <h3>Skills</h3>
+  <ul class="skill_list">
 
+  </ul>
+</section>
+{{#if loggedIn}}
 <script src="/scripts/index.js" type="text/javascript"></script>
+<script src="/scripts/animator.js" type="text/javascript"></script>
+{{/if}}

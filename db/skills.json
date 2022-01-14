@@ -1,0 +1,16 @@
+{
+  "attack": {
+    "display": "Basic attack",
+    "announce": "attacked the target!",
+    "type": "damage",
+    "strength": 3,
+    "reqs": []
+  },
+  "defend": {
+    "display": "Defend",
+    "announce": "took a defensive stance!",
+    "type": "guard",
+    "strength": 4,
+    "reqs": []
+  }
+}

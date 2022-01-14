@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const { GameController } = require('../gameController');
 
 // CREATE new user
 router.post('/', async (req, res) => {
@@ -12,6 +13,8 @@ router.post('/', async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
+      req.session.game = GameController.buildGameData();
+      console.log(req.session.game);
 
       res.status(200).json(dbUserData);
     });
@@ -48,6 +51,7 @@ router.post('/login', async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
+      req.session.game = GameController.buildGameData();
 
       res
         .status(200)

@@ -35,6 +35,22 @@ User.init(
         len: [6],
       },
     },
+    characterName: {
+      type: DataTypes.STRING,
+      defaultValue: "Nameless"
+    },
+    level: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0
+    },
+    experience: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0
+    },
+    gold: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0
+    },
   },
   {
     hooks: {

@@ -3,7 +3,11 @@ const router = require('express').Router();
 const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
-  res.render('home', { test: "asdf1234" });
+  if(req.session.loggedIn) {
+    res.render('home', { loggedIn: req.session.loggedIn });
+  } else {
+    res.render('home', { msg: "Please log in to play!" });
+  }
 });
 
 router.get('/login', (req, res) => {
